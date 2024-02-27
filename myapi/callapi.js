@@ -35,4 +35,15 @@ function getMyIpFetch() {
   .catch(err => {
      console.log(err);
    });
-}
+  }
+
+  function getMyIp() {
+    $.getJSON("https://api.ipify.org?format=json",
+       function(json) {
+         console.log(json);
+         $('#resultado').text(JSON.stringify(json));
+       }
+    );
+  }
+
+  
